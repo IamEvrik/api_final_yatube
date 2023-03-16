@@ -5,9 +5,10 @@ from rest_framework import filters, mixins, pagination, permissions, viewsets
 from django.shortcuts import get_object_or_404
 
 from api.permissions import IsOwnerOrReadOnly
-from api.serializers import (CommentSerializer, FollowSerializer,
-                             GroupSerializer, PostSerializer)
 from posts.models import Group, Post
+
+from .serializers import (CommentSerializer, FollowSerializer, GroupSerializer,
+                          PostSerializer)
 
 
 class CreateListViewSet(
