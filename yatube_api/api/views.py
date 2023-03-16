@@ -28,7 +28,7 @@ class GroupViewSet(viewsets.ReadOnlyModelViewSet):
 class PostViewSet(viewsets.ModelViewSet):
     """Отображение публикаций."""
 
-    queryset = Post.objects.all().select_related('author')
+    queryset = Post.objects.select_related('author')
     serializer_class = PostSerializer
     pagination_class = pagination.LimitOffsetPagination
     permission_classes = (
